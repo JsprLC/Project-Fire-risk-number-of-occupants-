@@ -59,6 +59,7 @@ python Mapping/Final_visualize_risk.py
 See `Mapping/START_HERE.md` for detailed instructions.
 
 **Output:** Interactive HTML map showing spatial distribution of fire risk
+**Map Link:** https://jsprlc.github.io/Project-Fire-risk-number-of-occupants-/DataMaps/building_risk_FINAL.html
 
 ## Project Structure
 
