@@ -2,7 +2,7 @@
 
 ## 🎯 The ACTUAL Problem
 
-Your data contains **3D building models** (MultiLineString with X, Y, Z coordinates).
+The data contains **3D building models** (MultiLineString with X, Y, Z coordinates).
 
 These are the **edges of 3D buildings**, not 2D footprints!
 
@@ -44,7 +44,7 @@ firefox building_risk_2d_footprints.html
 
 ## 📐 What's Different?
 
-### Your Data (3D):
+### The GeoData (3D):
 ```
 "coordinates": [
   [[lon, lat, 513.65], ...],    ← Z coordinate!
@@ -114,7 +114,7 @@ Map saved to: building_risk_2d_footprints.html
 
 ## 🎓 Why This Happens
 
-Your data is **CityGML** format:
+The data is **CityGML** format:
 - 3D building models
 - Stored as edge geometries (lines in 3D space)
 - Multiple height levels
@@ -127,38 +127,25 @@ For 2D maps, you need:
 
 ---
 
-## ⚠️ Previous Scripts Won't Work
-
-They all assumed simple 2D geometries.
-
-Your data is fundamentally different:
-- **3D MultiLineString with Z coordinates**
-- Need footprint extraction, not just conversion
-
-**Only `extract_2d_footprints.py` handles this correctly!**
-
----
-
 ## 📚 Documentation
 
-- **3D_TO_2D_SOLUTION.md** ← Full explanation
 - **START_HERE.md** ← This file
+- **3D_TO_2D.md** ← Full explanation for 3D to 2D
+- **SMALL_VALUES_GUIDE.md** ← Full explanation for percentile based coloring
 
 ---
 
 ## 🎯 Summary
 
-| Issue | Your Data |
+| Issue | The Data |
 |-------|-----------|
 | **Type** | 3D MultiLineString (CityGML) |
 | **Has** | X, Y, Z coordinates (3D edges) |
 | **Need** | 2D Polygon (ground footprint) |
 | **Solution** | Extract footprint at min Z |
-| **Script** | extract_2d_footprints.py |
+| **Script** | Final_visualize_risk.py |
 | **Result** | Solid colored blocks ✅ |
 
 ---
 
 **THIS is the correct solution for your 3D building data!** 🎯
-
-Run `extract_2d_footprints.py` now! 🚀
