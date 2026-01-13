@@ -62,6 +62,17 @@ See `Mapping/START_HERE.md` for detailed instructions.
 
 **Map Link:** https://jsprlc.github.io/Project-Fire-risk-number-of-occupants-/DataMaps/building_risk_FINAL.html
 
+### Step 4: Sensitivity Analysis
+
+```bash
+jupyter notebook 03Sensitivity_analysis.ipynb
+```
+
+- Conducts global sensitivity analysis for all buildings
+- Indentifies which inputs contribute most to the outcome uncertainty
+
+**Output:** Sensitivity metrics for each input variable
+
 ## Project Structure
 
 ```
@@ -71,11 +82,12 @@ See `Mapping/START_HERE.md` for detailed instructions.
     └── building_risk_static_maps.png
 ├── 01GIS_data.ipynb             # Step 1: Occupancy estimation
 ├── 02BNs.ipynb                  # Step 2: Risk analysis
+├── 03Sensitivity_analysis.ipynb # Step 4: Sensitivity analysis
 ├── functions_occupants.py       # Occupancy calculation functions
 ├── functions_extract_gdf.py     # GeoData extraction utilities
 ├── functions_BN.py              # Bayesian Network functions
 └── Mapping/
-    ├── Final_visualize_risk.py  # Visualization script
+    ├── Final_visualize_risk.py  # Step 3: Visualization script
     └── START_HERE.md            # Visualization guide
 ```
 
